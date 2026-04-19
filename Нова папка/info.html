@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>NORTH PARK | Оплата та Доставка</title>
+				<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+					<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+						<style>
+							/* ПАЛІТРА: ТЕМНИЙ ШОКОЛАД, КРЕМОВИЙ БЕЖ, ТЕПЛИЙ СІРИЙ */
+							:root {
+							--bg-color: #12100E;    /* Глибокий кавово-чорний фон */
+							--card-bg: #1A1715;     /* Трохи світліший для карток */
+							--text-main: #E0D9D1;   /* М'який кремовий текст (не сліпить) */
+							--text-muted: #8E857D;  /* Теплий сіро-коричневий для деталей */
+							--border-soft: #2B2522; /* Легкі межі карток */
+							--accent-btn: #D4C5B3;  /* Колір капучино для головної кнопки */
+							--accent-text: #12100E; /* Темний текст на світлій кнопці */
+							--btn-dark: #241F1C;    /* Темні кнопки копіювання */
+							}
+
+							body {
+							background: var(--bg-color);
+							color: var(--text-main);
+							font-family: 'Inter', sans-serif;
+							margin: 0; padding: 20px;
+							display: flex; flex-direction: column; align-items: center;
+							line-height: 1.4;
+							}
+
+							.container { width: 100%; max-width: 440px; }
+
+							/* ШАПКА */
+							.header { display: flex; align-items: center; gap: 15px; margin: 20px 0 30px; justify-content: center; }
+							.avatar { width: 55px; height: 55px; background: var(--accent-btn); color: var(--accent-text); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 0.9rem; }
+							.brand-name { font-size: 1.4rem; font-weight: 900; letter-spacing: 4px; text-transform: uppercase; color: var(--text-main); }
+
+							.notice-banner { background: #1F1B19; border: 1px solid var(--border-soft); color: var(--text-muted); padding: 12px; text-align: center; font-size: 0.8rem; font-weight: 700; border-radius: 10px; margin-bottom: 25px; text-transform: uppercase; }
+
+							/* КНОПКА ТЕЛЕГРАМ */
+							.tg-link { display: block; background: var(--accent-btn); color: var(--accent-text); text-align: center; padding: 18px; text-decoration: none; font-weight: 800; border-radius: 12px; margin-bottom: 15px; transition: 0.3s ease; letter-spacing: 1px; text-transform: uppercase; font-size: 0.9rem; }
+							.tg-link:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(212, 197, 179, 0.15); }
+
+							/* СОЦМЕРЕЖІ */
+							.social-icons { display: flex; justify-content: center; gap: 25px; margin-bottom: 30px; }
+							.social-icons a { color: var(--text-muted); font-size: 1.6rem; text-decoration: none; transition: 0.3s; }
+							.social-icons a:hover { color: var(--accent-btn); transform: scale(1.1); }
+
+							/* КАРТКИ */
+							.card { background: var(--card-bg); border-radius: 16px; padding: 30px; margin-bottom: 25px; border: 1px solid var(--border-soft); }
+							.card-title { text-align: center; font-size: 0.7rem; font-weight: 800; color: var(--text-muted); margin-bottom: 25px; letter-spacing: 1.5px; text-transform: uppercase; }
+
+							.data-group { border-bottom: 1px solid var(--border-soft); padding-bottom: 15px; margin-bottom: 15px; }
+							.data-group:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+							.label { font-size: 0.7rem; color: var(--text-muted); margin-bottom: 6px; text-transform: uppercase; font-weight: 600; }
+							.value { font-size: 0.95rem; font-weight: 700; word-break: break-all; color: var(--text-main); }
+
+							/* КНОПКА КОПІЮВАННЯ */
+							.copy-btn { background: var(--btn-dark); color: var(--text-main); border: 1px solid var(--border-soft); padding: 12px; font-size: 0.75rem; font-weight: 800; cursor: pointer; border-radius: 8px; margin-top: 10px; display: inline-flex; align-items: center; gap: 8px; width: 100%; justify-content: center; transition: 0.2s; text-transform: uppercase; }
+							.copy-btn:active { transform: scale(0.98); }
+							.copy-btn.success { background: var(--accent-btn); color: var(--accent-text); border-color: var(--accent-btn); }
+
+							/* ТЕКСТИ ТА СПИСКИ */
+							ul { padding-left: 18px; margin: 12px 0; font-size: 0.9rem; color: #BDB5AC; }
+							ul li { margin-bottom: 10px; }
+
+							.alert-text { font-weight: 900; color: #D46C6C; text-align: center; font-size: 0.85rem; margin: 20px 0; text-transform: uppercase; letter-spacing: 0.5px; }
+							.delivery-text { text-align: center; font-size: 0.9rem; font-weight: 800; margin-top: 25px; color: var(--accent-btn); text-transform: uppercase; letter-spacing: 1px; }
+
+							p { font-size: 0.95rem; margin: 10px 0; color: var(--text-main); }
+						</style>
+					</head>
+	<body>
+
+		<div class="container">
+			<div class="header">
+				<div class="avatar">NP</div>
+				<div class="brand-name">NORTH PARK</div>
+			</div>
+
+			<div class="notice-banner">Вгорі три крапки, відкрити у браузері ↗️</div>
+
+			<div style="text-align: center; font-weight: 800; margin-bottom: 12px; font-size: 0.75rem; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase;">Натисніть сюди для зв'язку</div>
+			<a href="https://t.me/North_Park_shop" target="_blank" class="tg-link">
+				<i class="fab fa-telegram-plane"></i> @North_Park_shop
+			</a>
+
+			<div class="social-icons">
+				<a href="https://instagram.com/northpark.shop" target="_blank">
+					<i class="fab fa-instagram"></i>
+				</a>
+				<a href="viber://chat?number=+380XXXXXXXXX" target="_blank">
+					<i class="fab fa-viber"></i>
+				</a>
+			</div>
+
+			<div class="card">
+				<div class="card-title">ФОП ЯСКУЛЬСЬКИЙ ОЛЕКСАНДР ВОЛОДИМИРОВИЧ</div>
+
+				<div class="data-group">
+					<div class="label">Отримувач</div>
+					<div class="value">ФОП Яскульський О. В.</div>
+				</div>
+
+				<div class="data-group">
+					<div class="label">Рахунок отримувача (IBAN)</div>
+					<div class="value" id="iban">UA623052990000026002026006272</div>
+					<button class="copy-btn" onclick="copyText('iban', this)">📋 Скопіювати IBAN</button>
+				</div>
+
+				<div class="data-group">
+					<div class="label">Код отримувача (ЄДРПОУ)</div>
+					<div class="value" id="edrpou">3228116331</div>
+					<button class="copy-btn" onclick="copyText('edrpou', this)">📋 Скопіювати ЄДРПОУ</button>
+				</div>
+
+				<div class="data-group">
+					<div class="label">Призначення платежу</div>
+					<div class="value" id="purpose">ОПЛАТА ЗА ТОВАР</div>
+					<button class="copy-btn" onclick="copyText('purpose', this)">📋 Скопіювати призначення</button>
+				</div>
+
+				<div class="delivery-text">Чекаємо ваші дані для відправки!</div>
+			</div>
+
+			<div class="card">
+				<div class="card-title">Умови та Доставка</div>
+
+				<p style="font-weight: 700;">● Повна оплата на рахунок ФОП</p>
+				<p style="font-weight: 700; border-bottom: 1px solid var(--border-soft); padding-bottom: 15px;">● Повернення коштів немає, лише обмін</p>
+
+				<p style="font-weight: 800; margin-top: 20px; font-size: 0.85rem; letter-spacing: 1px; color: var(--text-muted);">📦 ЛОГІСТИКА:</p>
+				<ul>
+					<li>Доставка тільки Новою Поштою</li>
+					<li>Відправлення замовлення 1-2 робочих дні</li>
+				</ul>
+
+				<div class="alert-text">❗️ На розпродаж обміну та повернення немає ❗️</div>
+
+				<p style="font-weight: 800; margin-top: 25px; font-size: 0.85rem; letter-spacing: 1px; color: var(--text-muted);">⚠️ ПОВЕРНЕННЯ:</p>
+				<ul>
+					<li>Тільки у разі виявлення браку при огляді на пошті</li>
+					<li>Обов'язково попередити менеджера перед відправкою</li>
+				</ul>
+			</div>
+		</div>
+
+		<script>
+			function copyText(elementId, btnElement) {
+			const textToCopy = document.getElementById(elementId).innerText;
+			navigator.clipboard.writeText(textToCopy).then(() => {
+			const originalText = btnElement.innerHTML;
+			btnElement.innerHTML = "✅ Скопійовано";
+			btnElement.classList.add("success");
+			setTimeout(() => {
+			btnElement.innerHTML = originalText;
+			btnElement.classList.remove("success");
+			}, 2000);
+			});
+			}
+		</script>
+	</body>
+</html>
